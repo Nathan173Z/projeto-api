@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 const categories = require('./models/categories');
-// require('dotenv').config();
-const port = 3033;
+require('dotenv').config();
+
 
 
 
@@ -109,8 +109,7 @@ app.put("/category", async (req, res) =>{
 
 
 
+app.listen(process.env.PORT, () => {
+    console.log(`Servidor iniciado na porta ${process.env.PORT} http://localhost:${process.env.PORT}`)});
 
-    
-app.listen(port, () => {
-    console.log(`Servidor iniciado na porta ${port} http://localhost:${port}`)});
 
