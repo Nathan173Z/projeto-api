@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('senac', 'root', '', {
-    host: 'localhost',
+const sequelize = new Sequelize(process.env.DB, 'root', '', {
+    host: process.env.DB_HOST,
     dialect: 'mysql'
 });
 
